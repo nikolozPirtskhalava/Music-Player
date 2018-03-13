@@ -23,6 +23,8 @@
 		C9C53D062057F03D00F16584 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C53D052057F03D00F16584 /* Result.swift */; };
 		C9C53D092057F29100F16584 /* DisplaySongsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C53D082057F29100F16584 /* DisplaySongsList.swift */; };
 		C9C53D102057F9D700F16584 /* ApiSongsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C53D0F2057F9D700F16584 /* ApiSongsResponse.swift */; };
+		C9C53D122057FAA700F16584 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C53D112057FAA700F16584 /* ApiResponse.swift */; };
+		C9C53D162057FABD00F16584 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C53D152057FABD00F16584 /* ApiClient.swift */; };
 		F15380C4DB26B54AFF7AE5D1 /* Pods_Music_Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C428043A7F3283A2DB603091 /* Pods_Music_Player.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		C9C53D052057F03D00F16584 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		C9C53D082057F29100F16584 /* DisplaySongsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplaySongsList.swift; sourceTree = "<group>"; };
 		C9C53D0F2057F9D700F16584 /* ApiSongsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiSongsResponse.swift; sourceTree = "<group>"; };
+		C9C53D112057FAA700F16584 /* ApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		C9C53D152057FABD00F16584 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		E06A96EBF9F5C85BA4BB42DC /* Pods-Music Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Player.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music Player/Pods-Music Player.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,6 +211,8 @@
 				C9C53D0A2057F4CE00F16584 /* Entities */,
 				C9C53D0C2057F4E000F16584 /* Gateways */,
 				C9C53D0D2057F4EE00F16584 /* Requests */,
+				C9C53D152057FABD00F16584 /* ApiClient.swift */,
+				C9C53D112057FAA700F16584 /* ApiResponse.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 				C9C53D042057EFE400F16584 /* SongsGateway.swift in Sources */,
 				C9C53CFE2057E64200F16584 /* Songs+List.swift in Sources */,
 				C9C53D102057F9D700F16584 /* ApiSongsResponse.swift in Sources */,
+				C9C53D122057FAA700F16584 /* ApiResponse.swift in Sources */,
 				C9C53CF62057D47D00F16584 /* URLConstants.swift in Sources */,
 				C9C53D012057EC5C00F16584 /* Song.swift in Sources */,
 				C9C53D062057F03D00F16584 /* Result.swift in Sources */,
@@ -362,6 +369,7 @@
 				C9C53CFB2057DC8D00F16584 /* SongTableViewCell.swift in Sources */,
 				C9C53CF12057D16C00F16584 /* SongsViewConfigurator.swift in Sources */,
 				C9C53D092057F29100F16584 /* DisplaySongsList.swift in Sources */,
+				C9C53D162057FABD00F16584 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
