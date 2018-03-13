@@ -11,7 +11,11 @@ import SwifterSwift
 
 class SongsViewController: UIViewController, SongsView {
     
-    @IBOutlet weak var songsTableView: UITableView!
+    @IBOutlet weak var songsTableView: UITableView! {
+        didSet {
+            songsTableView.contentInset = UIEdgeInsetsMake(0, 0, 100, 0)
+        }
+    }
     @IBOutlet weak var searchBar: UISearchBar!
     
     var presenter: SongsPresenter?
@@ -35,6 +39,10 @@ class SongsViewController: UIViewController, SongsView {
     
     func displayeRemoteSongsFetchError(error: Error) {
         UIAlertController.init(error: error).show()
+    }
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
     
 }
