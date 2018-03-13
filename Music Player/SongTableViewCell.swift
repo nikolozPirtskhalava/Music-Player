@@ -8,17 +8,27 @@
 
 import UIKit
 
-class SongTableViewCell: UITableViewCell {
+class SongTableViewCell: UITableViewCell, SongCellView {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBOutlet weak var labelArtistName: UILabel!
+    @IBOutlet weak var labelSongName: UILabel!
+    @IBOutlet weak var labelAlbumName: UILabel!
+    @IBOutlet weak var imageViewArt: UIImageView!
+    
+    func display(art: String) {
+        
     }
     
+    func display(song: String) {
+        self.labelSongName.text = song
+    }
+    
+    func display(album: String) {
+        self.labelAlbumName.text = album
+    }
+    
+    func display(artist: String) {
+        self.labelArtistName.text = artist
+    }
+
 }

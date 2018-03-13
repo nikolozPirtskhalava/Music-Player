@@ -8,6 +8,13 @@
 
 import Foundation
 
+protocol SongCellView {
+    func display(artist: String)
+    func display(album: String)
+    func display(song: String)
+    func display(art: String)
+}
+
 protocol SongsView: class {
     func refreshTableView()
     func displayeRemoteSongsFetchError(title: String, message: String)
@@ -15,6 +22,7 @@ protocol SongsView: class {
 
 protocol SongsPresenter {
     var  numberOfSOngs:Int { get }
+    func configure(cell: SongTableViewCell, forRow row: Int)
     func presentSongs(with artisName: String)
     func presentInitialSongs()
     
@@ -43,6 +51,17 @@ class SongsPresenterImplementation: SongsPresenter {
     
     func presentInitialSongs() {
         searchForSongs()
+    }
+    
+    func configure(cell: SongTableViewCell, forRow row: Int) {
+        guard let song = self.songs.item(at: row) else {
+            return
+        }
+        
+        cell.display(art: song.artImageUrl!)
+        cell.display(song: song.trackName!)
+        cell.display(album: song.albumTitle!)
+        cell.display(artist: song.artistName!)
     }
     
     

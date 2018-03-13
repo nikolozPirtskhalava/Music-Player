@@ -63,6 +63,12 @@
                     <constraint firstItem="Xb3-DV-dQQ" firstAttribute="leading" secondItem="cjq-Uk-boV" secondAttribute="leading" id="w10-7B-3ZR"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="imageViewArt" destination="5pB-jX-POl" id="5mO-Zd-ftA"/>
+                <outlet property="labelAlbumName" destination="cjq-Uk-boV" id="8dZ-bF-SJJ"/>
+                <outlet property="labelArtistName" destination="Xb3-DV-dQQ" id="Opx-Eq-XxE"/>
+                <outlet property="labelSongName" destination="0bT-ZU-mqp" id="P4o-Tk-VKo"/>
+            </connections>
             <point key="canvasLocation" x="-124" y="-102.5"/>
         </tableViewCell>
     </objects>
