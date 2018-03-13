@@ -8,18 +8,18 @@
 
 import Foundation
 
-protocol MusicPlayerView: class {
+protocol SongsView: class {
     func refreshTableView()
     func displayeRemoteSongsFetchError(title: String, message: String)
 }
 
-protocol MusicPlayerViewPresenter {
+protocol SongsViewPresenter {
     
 }
 
-class MusicPlayerViewPresenterImplementation: MusicPlayerViewPresenter {
+class SongsViewPresenterImplementation: SongsViewPresenter {
     
-    fileprivate weak var view: MusicPlayerView?
+    fileprivate weak var view: SongsView?
 
     
 }

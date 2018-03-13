@@ -9,7 +9,7 @@
 import UIKit
 import SwifterSwift
 
-class MusicPlayerViewController: UIViewController, MusicPlayerView {
+class SongsViewController: UIViewController, SongsView {
     
     @IBOutlet weak var songsTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
