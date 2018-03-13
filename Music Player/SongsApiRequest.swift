@@ -9,8 +9,8 @@
 import Foundation
 
 struct ArtistSearchParams {
-    var limit: Int
     var artistName: String
+    var limit: Int
 }
 
 class SongsApiReqeust: ApiRequest {
