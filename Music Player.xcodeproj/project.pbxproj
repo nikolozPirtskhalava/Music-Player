@@ -18,6 +18,7 @@
 		C9C53CFB2057DC8D00F16584 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C53CF92057DC8D00F16584 /* SongTableViewCell.swift */; };
 		C9C53CFC2057DC8D00F16584 /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C53CFA2057DC8D00F16584 /* SongTableViewCell.xib */; };
 		C9C53CFE2057E64200F16584 /* Songs+List.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C53CFD2057E64200F16584 /* Songs+List.swift */; };
+		C9C53D012057EC5C00F16584 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C53D002057EC5C00F16584 /* Song.swift */; };
 		F15380C4DB26B54AFF7AE5D1 /* Pods_Music_Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C428043A7F3283A2DB603091 /* Pods_Music_Player.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		C9C53CF92057DC8D00F16584 /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		C9C53CFA2057DC8D00F16584 /* SongTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
 		C9C53CFD2057E64200F16584 /* Songs+List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Songs+List.swift"; sourceTree = "<group>"; };
+		C9C53D002057EC5C00F16584 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		E06A96EBF9F5C85BA4BB42DC /* Pods-Music Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Player.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music Player/Pods-Music Player.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 		C9C53C832057AF3600F16584 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C9C53CFF2057EC4A00F16584 /* Entity */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -152,6 +155,14 @@
 				C9C53CFA2057DC8D00F16584 /* SongTableViewCell.xib */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		C9C53CFF2057EC4A00F16584 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C9C53D002057EC5C00F16584 /* Song.swift */,
+			);
+			name = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +294,7 @@
 				C9C53C732056C17600F16584 /* SongsViewController.swift in Sources */,
 				C9C53CFE2057E64200F16584 /* Songs+List.swift in Sources */,
 				C9C53CF62057D47D00F16584 /* URLConstants.swift in Sources */,
+				C9C53D012057EC5C00F16584 /* Song.swift in Sources */,
 				C9C53C712056C17600F16584 /* AppDelegate.swift in Sources */,
 				C9C53CFB2057DC8D00F16584 /* SongTableViewCell.swift in Sources */,
 				C9C53CF12057D16C00F16584 /* SongsViewConfigurator.swift in Sources */,
