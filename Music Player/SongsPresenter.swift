@@ -17,7 +17,7 @@ protocol SongCellView {
 
 protocol SongsView: class {
     func refreshTableView()
-    func displayeRemoteSongsFetchError(title: String, message: String)
+    func displayeRemoteSongsFetchError(error: Error)
 }
 
 protocol SongsPresenter {
@@ -82,7 +82,7 @@ class SongsPresenterImplementation: SongsPresenter {
     }
     
     func handleSongsFetchError(_ error: Error) {
-        self.view?.displayeRemoteSongsFetchError(title: "Error", message: error.localizedDescription)
+        self.view?.displayeRemoteSongsFetchError(error: error)
     }
     
 }

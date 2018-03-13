@@ -22,6 +22,7 @@ class ApiSongsGatewayImplementation: ApiSongsGateway {
     
     func searchSongs(with params: ArtistSearchParams, completionHandler: @escaping (Result<[Song]>) -> Void) {
         let searchRequest = SongsApiReqeust.init(searchParams: params)
+        print(searchRequest.urlRequest)
         apiClient.execute(request: searchRequest) { (result: Result<ApiResponse<ApiSongsResponse>>) in
             switch result {
             case let .success(response):

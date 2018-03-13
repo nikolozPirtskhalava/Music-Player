@@ -20,7 +20,7 @@ struct APPURL {
     }
     
     public struct Param {
-        static let Term = "&term="
+        static let Term = "?term="
         static let Limit = "&limit="
     }
     

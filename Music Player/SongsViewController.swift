@@ -33,8 +33,8 @@ class SongsViewController: UIViewController, SongsView {
         self.songsTableView.reloadData()
     }
     
-    func displayeRemoteSongsFetchError(title: String, message: String) {
-        
+    func displayeRemoteSongsFetchError(error: Error) {
+        UIAlertController.init(error: error).show()
     }
     
 }

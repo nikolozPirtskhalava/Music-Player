@@ -34,10 +34,10 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_indicator" translatesAutoresizingMaskIntoConstraints="NO" id="wgJ-1T-zoA">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-active" translatesAutoresizingMaskIntoConstraints="NO" id="wgJ-1T-zoA">
                         <constraints>
-                            <constraint firstAttribute="width" constant="35" id="7oS-av-9hL"/>
-                            <constraint firstAttribute="height" constant="35" id="9Na-2M-Rmp"/>
+                            <constraint firstAttribute="width" constant="20" id="7oS-av-9hL"/>
+                            <constraint firstAttribute="height" constant="20" id="9Na-2M-Rmp"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb3-DV-dQQ">
@@ -73,6 +73,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="icon_indicator" width="20" height="20"/>
+        <image name="icon-active" width="28" height="28"/>
     </resources>
 </document>
