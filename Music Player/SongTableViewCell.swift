@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SongCell: UITableViewCell {
+class SongTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

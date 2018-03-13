@@ -17,8 +17,8 @@ class SongsViewController: UIViewController, SongsView {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.configureTableOnLoad()
     }
-    
 
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         
