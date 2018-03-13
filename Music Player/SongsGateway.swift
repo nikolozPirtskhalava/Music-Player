@@ -11,5 +11,5 @@ import Foundation
 typealias SearchSongsGatewayCompletionHandler = (_ songs: Result<[Song]>) -> Void
 
 protocol SongsGateway {
-    func searchSongs(with keyword: String, completionHandler: @escaping SearchSongsGatewayCompletionHandler)
+    func searchSongs(with params: ArtistSearchParams, completionHandler: @escaping SearchSongsGatewayCompletionHandler)
 }

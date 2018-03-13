@@ -11,7 +11,7 @@ import Foundation
 typealias DisplaySongsUseCaseCompletionHandler = (_ songs: Result<[Song]>) -> Void
 
 protocol DisplaySongsUseCase {
-    func displaySongs(with keyword: String, completionHandler: @escaping DisplaySongsUseCaseCompletionHandler)
+    func displaySongs(with params: ArtistSearchParams, completionHandler: @escaping DisplaySongsUseCaseCompletionHandler)
 }
 
 class DisplaySongsUseCaseImplementation: DisplaySongsUseCase {
@@ -21,8 +21,8 @@ class DisplaySongsUseCaseImplementation: DisplaySongsUseCase {
         self.songsGateway = songsGateway
     }
     
-    func displaySongs(with keyword: String, completionHandler: @escaping (Result<[Song]>) -> Void) {
-        self.songsGateway.searchSongs(with: keyword) { (result) in
+    func displaySongs(with params: ArtistSearchParams, completionHandler: @escaping (Result<[Song]>) -> Void) {
+        self.songsGateway.searchSongs(with: params) { (result) in
             completionHandler(result)
         }
     }

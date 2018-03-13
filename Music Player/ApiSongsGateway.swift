@@ -20,8 +20,8 @@ class ApiSongsGatewayImplementation: ApiSongsGateway {
         self.apiClient = apiClient
     }
     
-    func searchSongs(with keyword: String, completionHandler: @escaping (Result<[Song]>) -> Void) {
-        
+    func searchSongs(with params: ArtistSearchParams, completionHandler: @escaping (Result<[Song]>) -> Void) {
+        let searchRequest = SongsApiReqeust.init(searchParams: <#T##ArtistSearchParams#>)
     }
     
 }
