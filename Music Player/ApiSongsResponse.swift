@@ -11,7 +11,7 @@ import Foundation
 
 struct ApiSongsResponse: InitializableWithData, InitializableWithJson {
     var count: NSNumber
-    var songs: [Song]
+    var songs: [ApiSong]
     
     
     init(data: Data?) throws {
@@ -32,7 +32,7 @@ struct ApiSongsResponse: InitializableWithData, InitializableWithJson {
         
         self.count = count
         do {
-            self.songs = try songs.map { try ApiSong.init(json: $0).song }
+            self.songs = try songs.map { try ApiSong.init(json: $0) }
         } catch {
             throw NSError.createPraseError()
         }

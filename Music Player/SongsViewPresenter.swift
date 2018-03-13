@@ -20,6 +20,12 @@ protocol SongsViewPresenter {
 class SongsViewPresenterImplementation: SongsViewPresenter {
     
     fileprivate weak var view: SongsView?
+    fileprivate let displaySongsUseCase: DisplaySongsUseCase?
+    
+    init(view: SongsView?, displaySongsUseCase: DisplaySongsUseCase?) {
+        self.view = view
+        self.displaySongsUseCase = displaySongsUseCase
+    }
 
     
 }

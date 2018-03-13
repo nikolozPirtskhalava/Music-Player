@@ -216,8 +216,8 @@
 			isa = PBXGroup;
 			children = (
 				C9C53D0A2057F4CE00F16584 /* Entities */,
-				C9C53D0C2057F4E000F16584 /* Gateways */,
 				C9C53D0D2057F4EE00F16584 /* Requests */,
+				C9C53D0C2057F4E000F16584 /* Gateways */,
 				C9C53D152057FABD00F16584 /* ApiClient.swift */,
 				C9C53D112057FAA700F16584 /* ApiResponse.swift */,
 			);

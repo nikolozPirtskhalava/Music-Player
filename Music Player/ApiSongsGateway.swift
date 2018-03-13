@@ -21,7 +21,16 @@ class ApiSongsGatewayImplementation: ApiSongsGateway {
     }
     
     func searchSongs(with params: ArtistSearchParams, completionHandler: @escaping (Result<[Song]>) -> Void) {
-        let searchRequest = SongsApiReqeust.init(searchParams: <#T##ArtistSearchParams#>)
+        let searchRequest = SongsApiReqeust.init(searchParams: params)
+        apiClient.execute(request: searchRequest) { (result: Result<ApiResponse<ApiSongsResponse>>) in
+            switch result {
+            case let .success(response):
+                let songs = response.entity.songs.map { $0.song }
+                completionHandler(.success(songs))
+            case let .failure(error):
+                completionHandler(.failure(error))
+            }
+        }
     }
     
 }
