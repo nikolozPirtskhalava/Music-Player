@@ -14,7 +14,6 @@ class MusicPlayerViewController: UIViewController, MusicPlayerView {
     @IBOutlet weak var songsTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,7 +25,7 @@ class MusicPlayerViewController: UIViewController, MusicPlayerView {
     }
     
     func refreshTableView() {
-        
+        self.songsTableView.reloadData()
     }
     
     func displayeRemoteSongsFetchError(title: String, message: String) {

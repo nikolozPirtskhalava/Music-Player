@@ -14,6 +14,7 @@
 		C9C53C7B2056C17600F16584 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C53C792056C17600F16584 /* LaunchScreen.storyboard */; };
 		C9C53CF12057D16C00F16584 /* MusicPlayerViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C53CF02057D16C00F16584 /* MusicPlayerViewConfigurator.swift */; };
 		C9C53CF32057D17B00F16584 /* MusicPlayerViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C53CF22057D17B00F16584 /* MusicPlayerViewPresenter.swift */; };
+		C9C53CF62057D47D00F16584 /* UrlConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C53CF52057D47D00F16584 /* UrlConstants.swift */; };
 		F15380C4DB26B54AFF7AE5D1 /* Pods_Music_Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C428043A7F3283A2DB603091 /* Pods_Music_Player.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		C9C53C7C2056C17600F16584 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9C53CF02057D16C00F16584 /* MusicPlayerViewConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewConfigurator.swift; sourceTree = "<group>"; };
 		C9C53CF22057D17B00F16584 /* MusicPlayerViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewPresenter.swift; sourceTree = "<group>"; };
+		C9C53CF52057D47D00F16584 /* UrlConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlConstants.swift; sourceTree = "<group>"; };
 		E06A96EBF9F5C85BA4BB42DC /* Pods-Music Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Player.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music Player/Pods-Music Player.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,9 +84,10 @@
 		C9C53C6F2056C17600F16584 /* Music Player */ = {
 			isa = PBXGroup;
 			children = (
-				C9C53C852057AF3F00F16584 /* GateWay */,
-				C9C53C842057AF3A00F16584 /* Scene */,
 				C9C53C832057AF3600F16584 /* Core */,
+				C9C53C842057AF3A00F16584 /* Scene */,
+				C9C53C852057AF3F00F16584 /* GateWay */,
+				C9C53CF42057D45A00F16584 /* Supporting Files */,
 				C9C53C702056C17600F16584 /* AppDelegate.swift */,
 				C9C53C742056C17600F16584 /* Main.storyboard */,
 				C9C53C772056C17600F16584 /* Assets.xcassets */,
@@ -116,6 +119,14 @@
 			children = (
 			);
 			name = GateWay;
+			sourceTree = "<group>";
+		};
+		C9C53CF42057D45A00F16584 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9C53CF52057D47D00F16584 /* UrlConstants.swift */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +255,7 @@
 			files = (
 				C9C53CF32057D17B00F16584 /* MusicPlayerViewPresenter.swift in Sources */,
 				C9C53C732056C17600F16584 /* MusicPlayerViewController.swift in Sources */,
+				C9C53CF62057D47D00F16584 /* UrlConstants.swift in Sources */,
 				C9C53C712056C17600F16584 /* AppDelegate.swift in Sources */,
 				C9C53CF12057D16C00F16584 /* MusicPlayerViewConfigurator.swift in Sources */,
 			);
