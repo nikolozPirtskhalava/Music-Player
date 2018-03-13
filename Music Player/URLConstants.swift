@@ -16,12 +16,17 @@ struct APPURL {
     }
     
     private struct Method {
-        static let Search = "/search?"
+        static let Search = "/search"
+    }
+    
+    public struct Param {
+        static let Term = "&term="
+        static let Limit = "&limit="
     }
     
     private static let BaseUrl = Domain.Dev
     
     static var Search: String {
-        return BaseUrl  + Method.Search
+        return BaseUrl  + Method.Search + Param.Term
     }
 }
