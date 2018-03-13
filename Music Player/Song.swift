@@ -10,8 +10,8 @@ import Foundation
 
 
 struct Song {
-    var name: String?
+    var trackName: String?
     var artistName: String?
     var albumTitle: String?
-    var albumCoverUrl: String?
+    var artImageUrl: String?
 }

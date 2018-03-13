@@ -9,8 +9,33 @@
 import Foundation
 
 
-struct ApiSongsResponse {
-    var count: Int
+struct ApiSongsResponse: InitializableWithData, InitializableWithJson {
+    var count: NSNumber
     var songs: [Song]
+    
+    
+    init(data: Data?) throws {
+        guard let data = data,
+            let jsonObject = try? JSONSerialization.jsonObject(with: data),
+            let json = jsonObject as? [String: Any] else {
+                throw NSError.createPraseError()
+        }
+        
+        try self.init(json: json)
+    }
+    
+    init(json: [String : Any]) throws {
+        guard let count = json["resultCount"] as? NSNumber,
+            let songs = json["results"] as? [[String: Any]] else {
+                throw NSError.createPraseError()
+        }
+        
+        self.count = count
+        do {
+            self.songs = try songs.map { try ApiSong.init(json: $0).song }
+        } catch {
+            throw NSError.createPraseError()
+        }
+    }
     
 }
