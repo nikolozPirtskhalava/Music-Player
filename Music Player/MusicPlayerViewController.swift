@@ -9,7 +9,7 @@
 import UIKit
 import SwifterSwift
 
-class MusicPlayerViewController: UIViewController {
+class MusicPlayerViewController: UIViewController, MusicPlayerView {
     
     @IBOutlet weak var songsTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -25,6 +25,12 @@ class MusicPlayerViewController: UIViewController {
         
     }
     
+    func refreshTableView() {
+        
+    }
     
+    func displayeRemoteSongsFetchError(title: String, message: String) {
+        
+    }
     
 }
