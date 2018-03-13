@@ -9,6 +9,6 @@
 import Foundation
 
 struct Default {
-    static let Artist = "lane 8"
+    static let Artist = "lane8"
     static let Limit = 25
 }

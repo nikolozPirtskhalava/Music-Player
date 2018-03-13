@@ -12,8 +12,8 @@
 		C9C53C762056C17600F16584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C53C742056C17600F16584 /* Main.storyboard */; };
 		C9C53C782056C17600F16584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C53C772056C17600F16584 /* Assets.xcassets */; };
 		C9C53C7B2056C17600F16584 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C53C792056C17600F16584 /* LaunchScreen.storyboard */; };
-		C9C53CF12057D16C00F16584 /* SongsViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C53CF02057D16C00F16584 /* SongsViewConfigurator.swift */; };
-		C9C53CF32057D17B00F16584 /* SongsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C53CF22057D17B00F16584 /* SongsViewPresenter.swift */; };
+		C9C53CF12057D16C00F16584 /* SongsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C53CF02057D16C00F16584 /* SongsConfigurator.swift */; };
+		C9C53CF32057D17B00F16584 /* SongsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C53CF22057D17B00F16584 /* SongsPresenter.swift */; };
 		C9C53CF62057D47D00F16584 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C53CF52057D47D00F16584 /* URLConstants.swift */; };
 		C9C53CFB2057DC8D00F16584 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C53CF92057DC8D00F16584 /* SongTableViewCell.swift */; };
 		C9C53CFC2057DC8D00F16584 /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C53CFA2057DC8D00F16584 /* SongTableViewCell.xib */; };
@@ -42,8 +42,8 @@
 		C9C53C772056C17600F16584 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9C53C7A2056C17600F16584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9C53C7C2056C17600F16584 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9C53CF02057D16C00F16584 /* SongsViewConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsViewConfigurator.swift; sourceTree = "<group>"; };
-		C9C53CF22057D17B00F16584 /* SongsViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsViewPresenter.swift; sourceTree = "<group>"; };
+		C9C53CF02057D16C00F16584 /* SongsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsConfigurator.swift; sourceTree = "<group>"; };
+		C9C53CF22057D17B00F16584 /* SongsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsPresenter.swift; sourceTree = "<group>"; };
 		C9C53CF52057D47D00F16584 /* URLConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		C9C53CF92057DC8D00F16584 /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		C9C53CFA2057DC8D00F16584 /* SongTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
@@ -141,8 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				C9C53C722056C17600F16584 /* SongsViewController.swift */,
-				C9C53CF02057D16C00F16584 /* SongsViewConfigurator.swift */,
-				C9C53CF22057D17B00F16584 /* SongsViewPresenter.swift */,
+				C9C53CF02057D16C00F16584 /* SongsConfigurator.swift */,
+				C9C53CF22057D17B00F16584 /* SongsPresenter.swift */,
 				C9C53CFD2057E64200F16584 /* Songs+List.swift */,
 			);
 			name = Scenes;
@@ -368,7 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9C53CF32057D17B00F16584 /* SongsViewPresenter.swift in Sources */,
+				C9C53CF32057D17B00F16584 /* SongsPresenter.swift in Sources */,
 				C9C53C732056C17600F16584 /* SongsViewController.swift in Sources */,
 				C9C53D042057EFE400F16584 /* SongsGateway.swift in Sources */,
 				C9C53CFE2057E64200F16584 /* Songs+List.swift in Sources */,
@@ -383,7 +383,7 @@
 				C9C53CFB2057DC8D00F16584 /* SongTableViewCell.swift in Sources */,
 				C9C53D182057FF0300F16584 /* ApiSong.swift in Sources */,
 				C9C53D1C205808B400F16584 /* SongsApiRequest.swift in Sources */,
-				C9C53CF12057D16C00F16584 /* SongsViewConfigurator.swift in Sources */,
+				C9C53CF12057D16C00F16584 /* SongsConfigurator.swift in Sources */,
 				C9C53D092057F29100F16584 /* DisplaySongsList.swift in Sources */,
 				C9C53D162057FABD00F16584 /* ApiClient.swift in Sources */,
 			);

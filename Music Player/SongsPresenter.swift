@@ -20,7 +20,7 @@ protocol SongsPresenter {
     
 }
 
-class SongsPresenterImplementation: SongsViewPresenter {
+class SongsPresenterImplementation: SongsPresenter {
     
     fileprivate weak var view: SongsView?
     fileprivate let displaySongsUseCase: DisplaySongsUseCase?
