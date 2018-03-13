@@ -12,7 +12,15 @@ import UIKit
 extension SongsViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        self.view.endEditing(true)
+        view.endEditing(true)
+        searchSongs(for: searchBar.text)
+    }
+    
+    func searchSongs(for artistName: String?){
+        guard let name = artistName else {
+            return
+        }
+        presenter?.presentSongs(with: name)
     }
     
 }

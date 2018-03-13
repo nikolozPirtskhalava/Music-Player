@@ -17,6 +17,11 @@ class SongsViewController: UIViewController, SongsView {
         }
     }
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var searchBarLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var tableViewTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var mediaPlayerControlsLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var mediaPlayerHeightConstraint: NSLayoutConstraint!
     
     var presenter: SongsPresenter?
     var configurator = SongsConfiguratorImplementation()

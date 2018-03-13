@@ -21,16 +21,16 @@
                             <constraint firstAttribute="width" secondItem="5pB-jX-POl" secondAttribute="height" multiplier="1:1" id="TnS-Ag-g6p"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bT-ZU-mqp">
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="HWn-kP-mar"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bT-ZU-mqp">
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjq-Uk-boV">
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="dnY-YP-VWP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -41,7 +41,10 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb3-DV-dQQ">
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="6Wo-Di-e9p"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -59,6 +62,7 @@
                     <constraint firstItem="wgJ-1T-zoA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="e4i-cr-0SY"/>
                     <constraint firstItem="cjq-Uk-boV" firstAttribute="leading" secondItem="0bT-ZU-mqp" secondAttribute="leading" id="gGx-e4-OSG"/>
                     <constraint firstItem="5pB-jX-POl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="hey-iV-ZhN"/>
+                    <constraint firstItem="Xb3-DV-dQQ" firstAttribute="top" secondItem="0bT-ZU-mqp" secondAttribute="bottom" id="nbA-fu-hdL"/>
                     <constraint firstAttribute="trailing" secondItem="wgJ-1T-zoA" secondAttribute="trailing" constant="8" id="vkz-nf-g2Z"/>
                     <constraint firstItem="Xb3-DV-dQQ" firstAttribute="leading" secondItem="cjq-Uk-boV" secondAttribute="leading" id="w10-7B-3ZR"/>
                 </constraints>

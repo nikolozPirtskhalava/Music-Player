@@ -24,7 +24,9 @@ class SongsApiReqeust: ApiRequest {
         let termValue = searchParams.artistName
         let limitKey = APPURL.Param.Limit
         let limitValue = searchParams.limit
-        let url: URL!  = URL.init(string: APPURL.Search + termValue + limitKey + "\(limitValue)")
+        let endpointString = APPURL.Search + termValue + limitKey + "\(limitValue)"
+        let escapedEndpoint = endpointString.withoutSpacesAndNewLines
+        let url: URL!  = URL.init(string: escapedEndpoint)
         var request = URLRequest(url: url)
             request.httpMethod = "GET"
         return request

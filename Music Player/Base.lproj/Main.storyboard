@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,16 +30,36 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="j8f-8O-wEY"/>
                                 </connections>
                             </searchBar>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zF5-AT-0WL">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhj-it-7zx">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Xoc-1G-isb"/>
+                                            <constraint firstAttribute="height" constant="50" id="h8B-fW-i83"/>
+                                        </constraints>
+                                        <state key="normal" image="icon_play"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.30588235289999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="uhj-it-7zx" secondAttribute="bottom" constant="25" id="BMe-cH-Rcx"/>
+                                    <constraint firstItem="uhj-it-7zx" firstAttribute="centerX" secondItem="zF5-AT-0WL" secondAttribute="centerX" constant="1.5" id="brz-28-gfZ"/>
+                                    <constraint firstAttribute="height" constant="100" id="fhd-hP-H5h"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="8cR-MU-zWn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="49g-ZS-DdA"/>
                             <constraint firstAttribute="trailing" secondItem="8cR-MU-zWn" secondAttribute="trailing" id="LA1-v8-pra"/>
                             <constraint firstItem="Vvs-gl-xBb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XD9-es-D0r"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zF5-AT-0WL" secondAttribute="bottom" id="aYx-cx-e3i"/>
                             <constraint firstAttribute="trailing" secondItem="Vvs-gl-xBb" secondAttribute="trailing" id="ajT-3Z-em9"/>
+                            <constraint firstAttribute="trailing" secondItem="zF5-AT-0WL" secondAttribute="trailing" id="awr-Pf-yeZ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8cR-MU-zWn" secondAttribute="bottom" id="frT-4J-eg6"/>
+                            <constraint firstItem="zF5-AT-0WL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kKb-R0-Dqi"/>
                             <constraint firstItem="Vvs-gl-xBb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kkd-Rs-DFd"/>
-                            <constraint firstItem="8cR-MU-zWn" firstAttribute="top" secondItem="Vvs-gl-xBb" secondAttribute="bottom" id="uVn-nF-Umq"/>
                             <constraint firstItem="8cR-MU-zWn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xDL-g2-DFa"/>
                         </constraints>
                         <connections>
@@ -48,9 +67,14 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="mediaPlayerControlsLeadingConstraint" destination="kKb-R0-Dqi" id="jet-Ew-KBq"/>
+                        <outlet property="mediaPlayerHeightConstraint" destination="fhd-hP-H5h" id="Pyg-yX-OnS"/>
                         <outlet property="searchBar" destination="Vvs-gl-xBb" id="cTP-1k-rVf"/>
+                        <outlet property="searchBarLeadingConstraint" destination="XD9-es-D0r" id="6oY-VU-cuf"/>
                         <outlet property="searchDisplayController" destination="UGB-F6-tLu" id="KSa-JH-O8e"/>
                         <outlet property="songsTableView" destination="8cR-MU-zWn" id="AbQ-Me-jo6"/>
+                        <outlet property="tableViewTopConstraint" destination="49g-ZS-DdA" id="DSd-J7-Cex"/>
+                        <outlet property="tableViewTrailingConstraint" destination="LA1-v8-pra" id="sws-Ha-ht0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,4 +88,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_play" width="20" height="22"/>
+    </resources>
 </document>
