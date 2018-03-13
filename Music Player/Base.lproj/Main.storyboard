@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Player View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PlayerViewController" customModule="Music_Player" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,35 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8cR-MU-zWn">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="X9u-Tw-XG4">
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8cR-MU-zWn" firstAttribute="top" secondItem="X9u-Tw-XG4" secondAttribute="bottom" id="KpQ-Pg-9wZ"/>
+                            <constraint firstAttribute="trailing" secondItem="8cR-MU-zWn" secondAttribute="trailing" id="LA1-v8-pra"/>
+                            <constraint firstItem="X9u-Tw-XG4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="MRa-pM-gj4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8cR-MU-zWn" secondAttribute="bottom" id="frT-4J-eg6"/>
+                            <constraint firstItem="X9u-Tw-XG4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gLM-9w-cpr"/>
+                            <constraint firstItem="8cR-MU-zWn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xDL-g2-DFa"/>
+                            <constraint firstAttribute="trailing" secondItem="X9u-Tw-XG4" secondAttribute="trailing" id="zdl-h4-Vih"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="X9u-Tw-XG4" id="GlL-Pc-ZbV"/>
+                        <outlet property="searchDisplayController" destination="UGB-F6-tLu" id="KSa-JH-O8e"/>
+                        <outlet property="songsTableView" destination="8cR-MU-zWn" id="AbQ-Me-jo6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="UGB-F6-tLu"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
