@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SongTableViewCell: UITableViewCell, SongCellView {
 
@@ -16,7 +17,8 @@ class SongTableViewCell: UITableViewCell, SongCellView {
     @IBOutlet weak var imageViewArt: UIImageView!
     
     func display(art: String) {
-        
+        let url = URL(string: art)
+        imageViewArt.kf.setImage(with: url)
     }
     
     func display(song: String) {

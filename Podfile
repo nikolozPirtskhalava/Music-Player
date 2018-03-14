@@ -6,5 +6,6 @@ target 'Music Player' do
   use_frameworks!
 
   pod 'SwifterSwift'
+  pod 'Kingfisher'
 
 end
