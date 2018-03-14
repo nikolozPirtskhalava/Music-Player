@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,6 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8cR-MU-zWn">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="zTM-zS-YGT"/>
@@ -25,24 +30,41 @@
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Vvs-gl-xBb">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="j8f-8O-wEY"/>
                                 </connections>
                             </searchBar>
-                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zF5-AT-0WL">
+                            <view hidden="YES" clipsSubviews="YES" alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zF5-AT-0WL">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhj-it-7zx">
+                                        <rect key="frame" x="164" y="25" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Xoc-1G-isb"/>
                                             <constraint firstAttribute="height" constant="50" id="h8B-fW-i83"/>
                                         </constraints>
                                         <state key="normal" image="icon_play"/>
+                                        <state key="selected" image="icon_pause"/>
+                                        <connections>
+                                            <action selector="didTapPlayPauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oty-45-vKI"/>
+                                        </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="100x100bb" translatesAutoresizingMaskIntoConstraints="NO" id="nGI-YP-m0q">
+                                        <rect key="frame" x="137" y="-125" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Ab5-aY-4rC"/>
+                                            <constraint firstAttribute="width" constant="100" id="ijo-Da-i0F"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.30588235289999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="nGI-YP-m0q" firstAttribute="centerX" secondItem="zF5-AT-0WL" secondAttribute="centerX" id="9BO-HP-GVM"/>
                                     <constraint firstAttribute="bottom" secondItem="uhj-it-7zx" secondAttribute="bottom" constant="25" id="BMe-cH-Rcx"/>
+                                    <constraint firstItem="uhj-it-7zx" firstAttribute="top" secondItem="nGI-YP-m0q" secondAttribute="bottom" constant="50" id="LfJ-5F-xr6"/>
                                     <constraint firstItem="uhj-it-7zx" firstAttribute="centerX" secondItem="zF5-AT-0WL" secondAttribute="centerX" constant="1.5" id="brz-28-gfZ"/>
                                     <constraint firstAttribute="height" constant="100" id="fhd-hP-H5h"/>
                                 </constraints>
@@ -69,6 +91,7 @@
                     <connections>
                         <outlet property="mediaPlayerControlsLeadingConstraint" destination="kKb-R0-Dqi" id="jet-Ew-KBq"/>
                         <outlet property="mediaPlayerHeightConstraint" destination="fhd-hP-H5h" id="Pyg-yX-OnS"/>
+                        <outlet property="mediaPlayerView" destination="zF5-AT-0WL" id="iYF-8M-0fW"/>
                         <outlet property="searchBar" destination="Vvs-gl-xBb" id="cTP-1k-rVf"/>
                         <outlet property="searchBarLeadingConstraint" destination="XD9-es-D0r" id="6oY-VU-cuf"/>
                         <outlet property="searchDisplayController" destination="UGB-F6-tLu" id="KSa-JH-O8e"/>
@@ -89,6 +112,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="100x100bb" width="100" height="90"/>
+        <image name="icon_pause" width="14" height="22"/>
         <image name="icon_play" width="20" height="22"/>
     </resources>
 </document>

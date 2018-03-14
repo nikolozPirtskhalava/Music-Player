@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C92CAD19205959C3003CE51B /* Songs+MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92CAD18205959C3003CE51B /* Songs+MediaPlayer.swift */; };
 		C9C53C712056C17600F16584 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C53C702056C17600F16584 /* AppDelegate.swift */; };
 		C9C53C732056C17600F16584 /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C53C722056C17600F16584 /* SongsViewController.swift */; };
 		C9C53C762056C17600F16584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C53C742056C17600F16584 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		3FA7F3D4F26FA061087913E4 /* Pods-Music Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Player.release.xcconfig"; path = "Pods/Target Support Files/Pods-Music Player/Pods-Music Player.release.xcconfig"; sourceTree = "<group>"; };
 		C428043A7F3283A2DB603091 /* Pods_Music_Player.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_Player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C92CAD18205959C3003CE51B /* Songs+MediaPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Songs+MediaPlayer.swift"; sourceTree = "<group>"; };
 		C9C53C6D2056C17600F16584 /* Music Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C53C702056C17600F16584 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9C53C722056C17600F16584 /* SongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				C9C53CFD2057E64200F16584 /* Songs+List.swift */,
 				C9C53D20205835B700F16584 /* Songs+Search.swift */,
 				C9C53D23205843E900F16584 /* Songs+Rotation.swift */,
+				C92CAD18205959C3003CE51B /* Songs+MediaPlayer.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				C9C53D1A2058076C00F16584 /* ApiSongsGateway.swift in Sources */,
 				C9C53CF62057D47D00F16584 /* URLConstants.swift in Sources */,
 				C9C53D012057EC5C00F16584 /* Song.swift in Sources */,
+				C92CAD19205959C3003CE51B /* Songs+MediaPlayer.swift in Sources */,
 				C9C53D062057F03D00F16584 /* Result.swift in Sources */,
 				C9C53C712056C17600F16584 /* AppDelegate.swift in Sources */,
 				C9C53D1E205811AE00F16584 /* KeyConstants.swift in Sources */,

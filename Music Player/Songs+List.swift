@@ -33,4 +33,8 @@ extension SongsViewController: UITableViewDelegate, UITableViewDataSource {
         return 100
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.presenter?.didSelect(row: indexPath.row)
+    }
+    
 }

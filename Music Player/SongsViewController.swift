@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 import SwifterSwift
 
 class SongsViewController: UIViewController, SongsView {
-    
+
+    @IBOutlet weak var mediaPlayerView: UIView!
     @IBOutlet weak var songsTableView: UITableView! {
         didSet {
             songsTableView.contentInset = UIEdgeInsetsMake(0, 0, 100, 0)
@@ -25,6 +27,7 @@ class SongsViewController: UIViewController, SongsView {
     
     var presenter: SongsPresenter?
     var configurator = SongsConfiguratorImplementation()
+    var audioPlayer: AVPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,4 +53,9 @@ class SongsViewController: UIViewController, SongsView {
         view.endEditing(true)
     }
     
+    @IBAction func didTapPlayPauseButton(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
+    
+
 }

@@ -10,8 +10,14 @@ import Foundation
 
 
 struct Song {
-    var trackName: String?
-    var artistName: String?
-    var albumTitle: String?
-    var artImageUrl: String?
+    var trackName: String
+    var artistName: String
+    var albumTitle: String
+    var artImageUrl: String
+    var previewUrl: String
+    var isPlaying : Bool
+    
+    mutating func set(isPlaying: Bool) {
+        self.isPlaying = isPlaying
+    }
 }
