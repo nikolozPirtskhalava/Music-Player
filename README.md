@@ -4,7 +4,7 @@ Simple music player app that lets you search for an artist by name.
 
 ## Installation
 
-App Builds On Xcode 8.2+
+App Builds On Xcode 8.0+
 
 ```
 Requires XCode 8+ / Swift 3+
