@@ -22,9 +22,11 @@ protocol SongsView: class {
     func playAudioTrack(with contentUrl: URL)
     func displayArtImageView(with artImageStringUrl: String)
     func DisplayButtonState(isSelected: Bool)
+    func showTableView()
     func stopMediaPlayback()
     func resumeMediaPlayback()
     func showMediaPlayer()
+    func stopLoading()
 }
 
 protocol SongsPresenter {
@@ -64,6 +66,7 @@ class SongsPresenterImplementation: SongsPresenter {
     }
     
     func presentInitialSongs() {
+        
         searchForSongs()
     }
     
@@ -81,6 +84,7 @@ class SongsPresenterImplementation: SongsPresenter {
     
     func searchForSongs(with params: ArtistSearchParams = ArtistSearchParams(artistName: Default.Artist, limit: Default.Limit)) {
         displaySongsUseCase?.displaySongs(with: params, completionHandler: { (result) in
+            self.view?.stopLoading()
             switch result {
             case let .success(songs):
                 self.handleSongsReceived(songs)
@@ -92,6 +96,7 @@ class SongsPresenterImplementation: SongsPresenter {
     
     func handleSongsReceived(_ songs:[Song]) {
         self.songs = songs
+        self.view?.showTableView()
         self.view?.refreshTableView()
     }
     

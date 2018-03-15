@@ -13,6 +13,7 @@ import SwifterSwift
 
 class SongsViewController: UIViewController, SongsView {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var mediaPlayerView: UIView!
     @IBOutlet weak var songsTableView: UITableView! {
         didSet {
@@ -48,6 +49,10 @@ class SongsViewController: UIViewController, SongsView {
         self.songsTableView.reloadData()
     }
     
+    func showTableView() {
+        self.songsTableView.isHidden = false
+    }
+    
     func displayeRemoteSongsFetchError(error: Error) {
         UIAlertController.init(error: error).show()
     }
@@ -67,6 +72,10 @@ class SongsViewController: UIViewController, SongsView {
     @IBAction func didTapPlayPauseButton(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         presenter?.playPauseButtonTapped(sender.isSelected)
+    }
+    
+    func stopLoading() {
+        self.activityIndicator.stopAnimating()
     }
     
     override var prefersStatusBarHidden: Bool {
