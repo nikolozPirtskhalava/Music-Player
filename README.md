@@ -18,10 +18,10 @@ Requires iOS 8+
 
 * **MVP**
 
-## Built With
+## Used Libraries
 
 * [SwifterSwift](https://github.com/SwifterSwift/SwifterSwift) - The Extension framework used
-* [Kingfisher](https://github.com/onevcat/Kingfisher) - Dependency Management
+* [Kingfisher](https://github.com/onevcat/Kingfisher) - Library for downloading and caching images
 
 ## Authors
 
