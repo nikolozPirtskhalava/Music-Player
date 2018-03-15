@@ -31,7 +31,7 @@ class SongsViewController: UIViewController, SongsView {
     
     var presenter: SongsPresenter?
     var configurator = SongsConfiguratorImplementation()
-    var audioPlayer: AVPlayer!
+    var audioPlayer: AVPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()

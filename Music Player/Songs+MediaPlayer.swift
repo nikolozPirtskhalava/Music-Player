@@ -12,20 +12,28 @@ import AVFoundation
 extension SongsViewController {
     
     func playAudioTrack(with contentUrl: URL) {
-        self.audioPlayer = AVPlayer.init(url: contentUrl)
-        self.audioPlayer.play()
+        audioPlayer = AVPlayer.init(url: contentUrl)
+        audioPlayer!.play()
     }
     
     func stopMediaPlayback() {
-        self.audioPlayer.pause()
+        guard let player = audioPlayer else {
+            return
+        }
+        
+        player.pause()
     }
     
     func showMediaPlayer() {
-        self.mediaPlayerView.isHidden = false
+        mediaPlayerView.isHidden = false
     }
     
     func resumeMediaPlayback() {
-        self.audioPlayer.play()
+        guard let player = audioPlayer else {
+            return
+        }
+        
+        player.play()
     }
     
     func DisplayButtonState(isSelected: Bool) {
