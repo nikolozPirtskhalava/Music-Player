@@ -13,13 +13,17 @@ protocol SongCellView {
     func display(album: String)
     func display(song: String)
     func display(art: String)
+    func display(indicated: Bool)
 }
 
 protocol SongsView: class {
     func refreshTableView()
     func displayeRemoteSongsFetchError(error: Error)
     func playAudioTrack(with contentUrl: URL)
+    func displayArtImageView(with artImageStringUrl: String)
+    func DisplayButtonState(isSelected: Bool)
     func stopMediaPlayback()
+    func resumeMediaPlayback()
     func showMediaPlayer()
 }
 
@@ -29,7 +33,7 @@ protocol SongsPresenter {
     func presentSongs(with artisName: String)
     func presentInitialSongs()
     func didSelect(row: Int)
-    func playPauseButtonTapped()
+    func playPauseButtonTapped(_ selected: Bool)
 }
 
 class SongsPresenterImplementation: SongsPresenter {
@@ -38,6 +42,7 @@ class SongsPresenterImplementation: SongsPresenter {
     fileprivate let displaySongsUseCase: DisplaySongsUseCase?
     
     var songs = [Song]()
+    var playingSong: Song?
     var selectedSong:Song? {
         didSet {
             view?.showMediaPlayer()
@@ -71,6 +76,7 @@ class SongsPresenterImplementation: SongsPresenter {
         cell.display(song: song.trackName)
         cell.display(album: song.albumTitle)
         cell.display(artist: song.artistName)
+        cell.display(indicated: song == playingSong)
     }
     
     func searchForSongs(with params: ArtistSearchParams = ArtistSearchParams(artistName: Default.Artist, limit: Default.Limit)) {
@@ -94,18 +100,53 @@ class SongsPresenterImplementation: SongsPresenter {
     }
     
     func didSelect(row: Int) {
-        guard var song = self.songs.item(at: row),
-              let contentUrl = URL.init(string: song.previewUrl) else {
+        guard let song = self.songs.item(at: row) else {
             return
         }
         
-        song.set(isPlaying: true)
-        self.selectedSong = song
-        self.view?.playAudioTrack(with: contentUrl)
+        selectedSong = song
+        view?.displayArtImageView(with: song.artImageUrl)
+        view?.DisplayButtonState(isSelected: selectedSong == playingSong)
     }
     
-    func playPauseButtonTapped() {
+    func playPauseButtonTapped(_ playButtonTapped: Bool) {
+        guard let song = selectedSong,
+              let songPreviewUrl = URL.init(string: song.previewUrl) else {
+            return
+        }
         
+        playButtonTapped ? startMediaplayBack(with: songPreviewUrl) : stopMediaPlayBack()
+    }
+    
+    private func startMediaplayBack(with contentUrl: URL) {
+        if noMediaPlayback() {
+            selectPlayingSong()
+            view?.playAudioTrack(with: contentUrl)
+        } else {
+            if selectedSongIsPlaying() {
+                view?.resumeMediaPlayback()
+            } else {
+                selectPlayingSong()
+                view?.playAudioTrack(with: contentUrl)
+            }
+        }
+    }
+    
+    private func stopMediaPlayBack() {
+        view?.stopMediaPlayback()
+    }
+    
+    private func noMediaPlayback() -> Bool {
+        return self.playingSong == nil
+    }
+    
+    private func selectedSongIsPlaying() -> Bool {
+        return selectedSong == playingSong
+    }
+    
+    private func selectPlayingSong() {
+        playingSong = selectedSong
+        view?.refreshTableView()
     }
     
 }

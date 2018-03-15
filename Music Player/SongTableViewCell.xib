@@ -77,6 +77,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="imageViewArt" destination="5pB-jX-POl" id="5mO-Zd-ftA"/>
+                <outlet property="imageViewIndicator" destination="wgJ-1T-zoA" id="dvU-5k-Pqn"/>
                 <outlet property="labelAlbumName" destination="cjq-Uk-boV" id="8dZ-bF-SJJ"/>
                 <outlet property="labelArtistName" destination="Xb3-DV-dQQ" id="Opx-Eq-XxE"/>
                 <outlet property="labelSongName" destination="0bT-ZU-mqp" id="P4o-Tk-VKo"/>

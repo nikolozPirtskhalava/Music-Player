@@ -15,6 +15,7 @@ class SongTableViewCell: UITableViewCell, SongCellView {
     @IBOutlet weak var labelSongName: UILabel!
     @IBOutlet weak var labelAlbumName: UILabel!
     @IBOutlet weak var imageViewArt: UIImageView!
+    @IBOutlet weak var imageViewIndicator: UIImageView!
     
     func display(art: String) {
         let url = URL(string: art)
@@ -31,6 +32,10 @@ class SongTableViewCell: UITableViewCell, SongCellView {
     
     func display(artist: String) {
         self.labelArtistName.text = artist
+    }
+    
+    func display(indicated: Bool) {
+        imageViewIndicator.isHidden = !indicated
     }
 
 }

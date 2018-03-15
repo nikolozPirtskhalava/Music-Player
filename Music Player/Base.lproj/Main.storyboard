@@ -89,6 +89,8 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="artImageView" destination="nGI-YP-m0q" id="dNt-cu-ESw"/>
+                        <outlet property="buttonPlayPause" destination="uhj-it-7zx" id="H7l-cY-ubS"/>
                         <outlet property="mediaPlayerControlsLeadingConstraint" destination="kKb-R0-Dqi" id="jet-Ew-KBq"/>
                         <outlet property="mediaPlayerHeightConstraint" destination="fhd-hP-H5h" id="Pyg-yX-OnS"/>
                         <outlet property="mediaPlayerView" destination="zF5-AT-0WL" id="iYF-8M-0fW"/>

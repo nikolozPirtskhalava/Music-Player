@@ -17,11 +17,19 @@ extension SongsViewController {
     }
     
     func stopMediaPlayback() {
-        
+        self.audioPlayer.pause()
     }
     
     func showMediaPlayer() {
         self.mediaPlayerView.isHidden = false
+    }
+    
+    func resumeMediaPlayback() {
+        self.audioPlayer.play()
+    }
+    
+    func DisplayButtonState(isSelected: Bool) {
+        buttonPlayPause.isSelected = isSelected
     }
     
 }

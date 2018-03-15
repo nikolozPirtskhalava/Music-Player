@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 import AVFoundation
 import SwifterSwift
 
@@ -24,6 +25,8 @@ class SongsViewController: UIViewController, SongsView {
     @IBOutlet weak var tableViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var mediaPlayerControlsLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var mediaPlayerHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var artImageView: UIImageView!
+    @IBOutlet weak var buttonPlayPause: UIButton!
     
     var presenter: SongsPresenter?
     var configurator = SongsConfiguratorImplementation()
@@ -49,13 +52,20 @@ class SongsViewController: UIViewController, SongsView {
         UIAlertController.init(error: error).show()
     }
     
+    func displayArtImageView(with artImageStringUrl: String) {
+        guard let artImageUrl = URL.init(string: artImageStringUrl) else {
+            return
+        }
+        
+        artImageView.kf.setImage(with: artImageUrl)
+    }
+    
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
     
     @IBAction func didTapPlayPauseButton(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
+        presenter?.playPauseButtonTapped(sender.isSelected)
     }
-    
-
 }
