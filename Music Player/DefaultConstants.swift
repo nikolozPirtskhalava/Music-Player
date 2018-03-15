@@ -11,4 +11,6 @@ import Foundation
 struct Default {
     static let Artist = "lane8"
     static let Limit = 25
+    static let StatusBarHeight = 20
+    static let MediaPlayerHeightConstraint = 100
 }

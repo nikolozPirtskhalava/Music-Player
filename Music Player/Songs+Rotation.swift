@@ -18,13 +18,13 @@ extension SongsViewController {
             tableViewTrailingConstraint.constant = SwifterSwift.screenHeight/2
             tableViewTopConstraint.constant = 0
             mediaPlayerControlsLeadingConstraint.constant = SwifterSwift.screenHeight/2
-            mediaPlayerHeightConstraint.constant = SwifterSwift.screenWidth - 64
+            mediaPlayerHeightConstraint.constant = SwifterSwift.screenWidth - searchBar.frame.size.height - CGFloat(Default.StatusBarHeight)
         } else {
             searchBarLeadingConstraint.constant = 0
             tableViewTrailingConstraint.constant = 0
-            tableViewTopConstraint.constant = 44
+            tableViewTopConstraint.constant = searchBar.frame.height + CGFloat(Default.StatusBarHeight)
             mediaPlayerControlsLeadingConstraint.constant = 0
-            mediaPlayerHeightConstraint.constant = 100
+            mediaPlayerHeightConstraint.constant = CGFloat(Default.MediaPlayerHeightConstraint)
         }
     }
     

@@ -68,4 +68,8 @@ class SongsViewController: UIViewController, SongsView {
         sender.isSelected = !sender.isSelected
         presenter?.playPauseButtonTapped(sender.isSelected)
     }
+    
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
 }
