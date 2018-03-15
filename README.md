@@ -25,7 +25,7 @@ Requires iOS 8+
 
 ## Authors
 
-* **Nikoloz Pirtskhalava** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Nikoloz Pirtskhalava**
 
 
 
